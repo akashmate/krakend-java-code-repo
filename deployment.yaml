@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apicurio-registry
+  labels:
+    app: apicurio-registry
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apicurio-registry
+  template:
+    metadata:
+      labels:
+        app: apicurio-registry
+    spec:
+      containers:
+      - name: apicurio-registry
+        image: harbor.massiltech.com/krakendproject/apicurio-registry-ui:3.0.5
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
