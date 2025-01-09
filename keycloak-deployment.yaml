@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: keycloak
-        image: harbor.massiltech.com/krakendproject/keycloak
+        image: harbor.massiltech.com/krakendproject/keycloak:26.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
