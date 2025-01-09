@@ -25,6 +25,8 @@ spec:
         command: ["/opt/keycloak/bin/kc.sh"]
         args: ["start-dev"]
         env:
+        - name: PROXY_ADDRESS_FORWARDING
+          value: "true"
         - name: KC_BOOTSTRAP_ADMIN_USERNAME
           value: "admin"
         - name: KC_BOOTSTRAP_ADMIN_PASSWORD
