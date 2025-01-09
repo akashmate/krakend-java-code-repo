@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Krk-app
+  name: krk-app
   namespace: argocd
 spec:
   project: default
