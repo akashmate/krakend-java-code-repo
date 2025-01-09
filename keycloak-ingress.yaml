@@ -3,6 +3,11 @@ kind: Ingress
 metadata:
   name: keycloak-ingress
   namespace: krk-application-namespace
+  annotations:
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      location /resources/ {
+        default_type text/css;
+      }
 spec:
   rules:
   - host: "keycloak.local.com"
