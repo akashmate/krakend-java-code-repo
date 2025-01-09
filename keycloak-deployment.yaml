@@ -30,6 +30,6 @@ spec:
         - name: KC_BOOTSTRAP_ADMIN_PASSWORD
           value: "admin"
         - name: KEYCLOAK_FRONTEND_URL
-          value: "http://keycloak.local.com"
+          value: "http://keycloak.local.com:31438"
         - name: KEYCLOAK_PROXY
           value: "edge"
