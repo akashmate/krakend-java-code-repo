@@ -19,4 +19,4 @@ spec:
         image: harbor.massiltech.com/krakendproject/apicurio-registry-ui:3.0.5
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 8888
