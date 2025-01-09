@@ -5,7 +5,8 @@ metadata:
   namespace: krk-application-namespace
 spec:
   rules:
-  - http:
+  - host: "keycloak.local.com"
+    http:
       paths:
       - path: "/"
         pathType: Prefix
