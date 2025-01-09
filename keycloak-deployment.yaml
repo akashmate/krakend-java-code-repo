@@ -21,3 +21,5 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        command: ["/opt/keycloak/bin/kc.sh"]
+        args: ["start"]
