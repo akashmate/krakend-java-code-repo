@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: apicurio-registry-service
+  name: keycloak-service
   namespace: krk-application-namespace
   labels:
-    app: apicurio-registry
+    app: keycloak
 spec:
   selector:
-    app: apicurio-registry
+    app: keycloak
   ports:
     - protocol: TCP
-      port: 81
-      targetPort: 8888
-  type: ClusterIP
+      port: 80
+      targetPort: 8080
+      nodePort: 31438
+  type: NodePort
