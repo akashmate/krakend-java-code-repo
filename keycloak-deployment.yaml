@@ -22,4 +22,9 @@ spec:
         ports:
         - containerPort: 8080
         command: ["/opt/keycloak/bin/kc.sh"]
-        args: ["start-dev"]
+        args: ["start"]
+        env:
+        - name: KC_BOOTSTRAP_ADMIN_USERNAME
+          value: "admin"
+        - name: KC_BOOTSTRAP_ADMIN_PASSWORD
+          value: "admin"
