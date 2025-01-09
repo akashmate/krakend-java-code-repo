@@ -5,8 +5,7 @@ metadata:
   namespace: krk-application-namespace
 spec:
   rules:
-  - host: "10.175.1.110"
-    http:
+  - http:
       paths:
       - path: "/"
         pathType: Prefix
