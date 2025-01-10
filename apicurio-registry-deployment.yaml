@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apicurio-registry
+  namespace: krk-application-namespace
+  labels:
+    app: apicurio-registry
+spec:
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: apicurio-registry
+  template:
+    metadata:
+      labels:
+        app: apicurio-registry
+    spec:
+      containers:
+        - name: apicurio-registry
+          image: harbor.massiltech.com/krakendproject/apicurio-registry:3.0.5
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8889
+          env:
+            - name: APICURIO_STORAGE_KIND
+              value: "sql"
+            - name: APICURIO_STORAGE_SQL_KIND
+              value: "postgresql"
+            - name: APICURIO_DATASOURCE_URL
+              value: "jdbc:postgresql://10.175.1.110:31304/postgres?user=postgres&password=69NNHvnsyC"
+            - name: APICURIO_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: APICURIO_DATASOURCE_PASSWORD
+              value: "69NNHvnsyC"
+      volumes:
+        - name: apicurio-data
+          persistentVolumeClaim:
+            claimName: apicurio-pvc
