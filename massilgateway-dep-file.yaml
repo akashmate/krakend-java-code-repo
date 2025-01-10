@@ -25,11 +25,11 @@ spec:
             - name: DOCKER_HOST
               value: "tcp://host.docker.internal:2375"
           volumeMounts:
-            - name: config-volume
+            - name: config-map
               mountPath: /app/config/application.yml
               subPath: application.yml
       volumes:
-        - name: config-volume
+        - name: config-map
           hostPath:
             path: /home/masssil/Documents/application.yml
             type: File
