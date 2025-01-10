@@ -36,4 +36,4 @@ spec:
       volumes:
         - name: apicurio-data
           persistentVolumeClaim:
-            claimName: apicurio-pvc
+            claimName: keycloak-pvc
