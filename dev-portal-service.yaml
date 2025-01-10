@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-portal-service
+  namespace: krk-application-namespace
+  labels:
+    app: dev-portal
+spec:
+  selector:
+    app: dev-portal
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
