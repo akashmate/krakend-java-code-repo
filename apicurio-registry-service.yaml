@@ -10,7 +10,7 @@ spec:
     app: apicurio-registry
   ports:
     - protocol: TCP
-      port: 81
-      targetPort: 8889
+      port: 80
+      targetPort: 8080
       nodePort: 31845
   type: NodePort
