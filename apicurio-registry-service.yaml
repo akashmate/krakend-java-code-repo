@@ -12,4 +12,5 @@ spec:
     - protocol: TCP
       port: 81
       targetPort: 8889
+      nodePort: 31845
   type: NodePort
