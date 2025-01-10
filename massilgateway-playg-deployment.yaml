@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: massil-playground-deployment
+  namespace: krk-application-namespace
+  labels:
+    app: massil-playground
+spec:
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: massil-playground
+  template:
+    metadata:
+      labels:
+        app: massil-playground
+    spec:
+      containers:
+      - name: massil-playground
+        image: harbor.massiltech.com/krakendproject/rupesh2811/massil_playground:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8089
