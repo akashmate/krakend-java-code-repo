@@ -35,3 +35,14 @@ spec:
           value: "http://10.175.1.110:31438/admin"
         - name: KEYCLOAK_PROXY
           value: "edge"
+        - name: KC_DB
+          value: "postgres"
+        - name: KC_DB_URL
+          value: "jdbc:postgresql://10.175.1.110:31304/postgres?user=postgres&password=69NNHvnsyC"
+        volumeMounts:
+        - name: keycloak-data
+          mountPath: /opt/keycloak/data
+      volumes:
+      - name: keycloak-data
+        persistentVolumeClaim:
+          claimName: keycloak-pvc
