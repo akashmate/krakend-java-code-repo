@@ -21,4 +21,4 @@ spec:
             - containerPort: 8082
           env:
             - name: DOCKER_HOST
-              value: "tcp://host.docker.internal:2375"
+              value: "tcp://10.175.1.110:2375"
