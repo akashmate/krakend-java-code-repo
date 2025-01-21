@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: dev-portal
-        image: harbor.massiltech.com/krakendproject/yogesh0897/dev-portal-v1:latest
+        image: harbor.massiltech.com/krakendproject/yogesh0897/dev-portal-v2:recent
         imagePullPolicy: Always
         ports:
         - containerPort: 80
