@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: massilgateway-service
+  namespace: krk-application-namespace
+  labels:
+    app: massilgateway
+spec:
+  selector:
+    app: massilgateway
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082
+      nodePort: 31740
+  type: NodePort
