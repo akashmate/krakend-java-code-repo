@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: theme-properties-config
-  namespace: default
+  namespace: krk-application-namespace
 data:
   theme.properties: |
 
