@@ -42,7 +42,19 @@ spec:
         volumeMounts:
         - name: keycloak-data
           mountPath: /opt/keycloak/data
+        - name: template-ftl
+          mountPath: /opt/keycloak/themes/custom/login/template.ftl
+          subPath: template.ftl
+        - name: theme-file
+          mountPath: /opt/keycloak/themes/custom/login/theme.properties
+          subPath: theme.properties
       volumes:
       - name: keycloak-data
         persistentVolumeClaim:
           claimName: keycloak-pvc
+      - name: template-ftl
+        configMap:
+          name: massil-template
+      - name: theme-file
+        configMap:
+          name: krakend-demo-config
