@@ -57,4 +57,4 @@ spec:
           name: massil-template
       - name: theme-file
         configMap:
-          name: krakend-demo-config
+          name: theme-properties-config
