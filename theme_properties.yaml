@@ -5,7 +5,7 @@ metadata:
   namespace: krk-application-namespace
 data:
   theme.properties: |
-    parent=base 
+    parent=base
     import=common/keycloak
 
     styles=css/login.css
