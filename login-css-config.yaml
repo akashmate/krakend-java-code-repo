@@ -24,7 +24,7 @@ data:
     { conten:"\2c5"; margin-left:var(--pf-global--spacer--xs)}.login-pf
     .container {padding-top:40px;}.login-pf a:hover {color:#0099d3;} #kc-logo {
     width: 100%;}div.kc-logo-text
-    {background-image:url(../img/massil_logo.svg);background-size:contain;background-repeat:
+    {background-image:url(../img/massil-logo.svg);background-size:contain;background-repeat:
     no-repeat;    height: 63px;    width: 300px;margin-left:
     600px;}div.kc-logo-text span {display: none;}#kc-header {  color:
     #ededed;overflow: visible;white-space: nowrap;}#kc-header-wrapper {
