@@ -23,7 +23,11 @@ spec:
         ports:
         - containerPort: 8080
         command: ["/opt/keycloak/bin/kc.sh"]
-        args: ["start-dev"]
+        args: 
+          - "start-dev"
+          - "--spi-theme-static-max-age=-1"
+          - "--spi-theme-cache-themes=false"
+          - "--spi-theme-cache-templates=false"
         env:
         - name: PROXY_ADDRESS_FORWARDING
           value: "true"
@@ -42,7 +46,31 @@ spec:
         volumeMounts:
         - name: keycloak-data
           mountPath: /opt/keycloak/data
+        - name: template-ftl
+          mountPath: /opt/keycloak/themes/custom/login/template.ftl
+          subPath: template.ftl
+        - name: theme-file
+          mountPath: /opt/keycloak/themes/custom/login/theme.properties
+          subPath: theme.properties
+        - name: logincss-file
+          mountPath: /opt/keycloak/themes/custom/login/resources/css/login.css
+          subPath: login.css
+        - name: massillogo-file
+          mountPath: /opt/keycloak/themes/custom/login/resources/img/massil-logo.svg
+          subPath: massil-logo.svg
       volumes:
       - name: keycloak-data
         persistentVolumeClaim:
           claimName: keycloak-pvc
+      - name: template-ftl
+        configMap:
+          name: massil-template
+      - name: theme-file
+        configMap:
+          name: theme-properties-config
+      - name: massillogo-file
+        configMap:
+          name: massil-logo-config
+      - name: logincss-file
+        configMap:
+          name: login-css-config
