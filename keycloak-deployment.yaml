@@ -23,7 +23,7 @@ spec:
         ports:
         - containerPort: 8080
         command: ["/opt/keycloak/bin/kc.sh"]
-        args: ["start-dev"]
+        args: ["start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false"]
         env:
         - name: PROXY_ADDRESS_FORWARDING
           value: "true"
