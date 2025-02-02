@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: massilgateway
-          image: harbor.massiltech.com/krakendproject/rupesh2811/massilgateway2.0:7.0
+          image: docker pull rupesh2811/massil_playground:1.0
           ports:
             - containerPort: 8082
           env:
