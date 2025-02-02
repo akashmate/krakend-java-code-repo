@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: massil-playground
-        image: harbor.massiltech.com/krakendproject/rupesh2811/massil_playground:latest
+        image: harbor.massiltech.com/krakendproject/massil_playground:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8089
