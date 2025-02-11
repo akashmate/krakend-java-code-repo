@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: publisher-portal
-        image: harbor.massiltech.com/krakendproject/hemanth1375/publisherportal:3.4
+        image: harbor.massiltech.com/krakendproject/hemanth1375/publisherportal:4.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
