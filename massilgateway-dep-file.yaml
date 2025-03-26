@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: massilgateway
-          image: harbor.massiltech.com/krakendproject/rupesh2811/massilgateway4.0:28.0
+          image: harbor.massiltech.com/krakendproject/rupesh2811/massilgateway4.0:27.0
           ports:
             - containerPort: 8082
           env:
